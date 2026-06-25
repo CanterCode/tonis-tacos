@@ -32,9 +32,10 @@ export default function GalleryGrid({ images }: { images: GalleryImage[] }) {
             aria-label={`View photo: ${img.alt}`}
           >
             <img
-              src={`/gallery/${img.filename}`}
+              src={`/gallery/${encodeURIComponent(img.filename)}`}
               alt={img.alt}
               className="w-full object-cover hover:scale-105 transition-transform duration-300"
+              loading="lazy"
             />
           </button>
         ))}

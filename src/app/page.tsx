@@ -87,7 +87,7 @@ export default function HomePage() {
             </div>
             <div className="flex items-center justify-center">
               <div className="bg-white/10 rounded-3xl p-12 flex flex-col items-center gap-4 border border-white/20">
-                <MapPin className="w-16 h-16 text-secondary" />
+                <MapPin className="w-16 h-16 text-secondary" aria-hidden="true" />
                 <p className="text-cream font-heading text-xl font-bold text-center">408 W 8th St</p>
                 <p className="text-cream/70 text-sm text-center">Dallas, TX 75208</p>
               </div>

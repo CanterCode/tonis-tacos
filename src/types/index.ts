@@ -48,4 +48,5 @@ export interface HappyHourItem {
   name: string;
   regular: string;
   happyHour: string;
+  category: 'drinks' | 'food';
 }

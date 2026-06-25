@@ -46,19 +46,19 @@ export default function Footer() {
             <h3 className="text-cream font-semibold text-sm uppercase tracking-widest mb-4">Find Us</h3>
             <ul className="flex flex-col gap-3">
               <li className="flex gap-2 text-sm">
-                <MapPin className="w-4 h-4 text-secondary flex-shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-secondary flex-shrink-0 mt-0.5" aria-hidden="true" />
                 <a href={SITE_CONFIG.mapsUrl} target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">{SITE_CONFIG.address}</a>
               </li>
               <li className="flex gap-2 text-sm">
-                <Phone className="w-4 h-4 text-secondary flex-shrink-0 mt-0.5" />
+                <Phone className="w-4 h-4 text-secondary flex-shrink-0 mt-0.5" aria-hidden="true" />
                 <a href={SITE_CONFIG.phoneTel} className="hover:text-secondary transition-colors">{SITE_CONFIG.phone}</a>
               </li>
               <li className="flex gap-2 text-sm">
-                <Mail className="w-4 h-4 text-secondary flex-shrink-0 mt-0.5" />
+                <Mail className="w-4 h-4 text-secondary flex-shrink-0 mt-0.5" aria-hidden="true" />
                 <a href={`mailto:${SITE_CONFIG.emailGeneral}`} className="hover:text-secondary transition-colors">{SITE_CONFIG.emailGeneral}</a>
               </li>
               <li className="flex gap-2 text-sm">
-                <AtSign className="w-4 h-4 text-secondary flex-shrink-0 mt-0.5" />
+                <AtSign className="w-4 h-4 text-secondary flex-shrink-0 mt-0.5" aria-hidden="true" />
                 <a href={SITE_CONFIG.socials.instagram.url} className="hover:text-secondary transition-colors">{SITE_CONFIG.socials.instagram.handle}</a>
               </li>
             </ul>

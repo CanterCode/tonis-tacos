@@ -1,10 +1,10 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import SectionHeader from '@/components/ui/SectionHeader';
 
 export const metadata: Metadata = {
   title: 'About',
-  description: "Meet Toni Reyes â€” the story behind Toni's Tacos and Bishop Arts' favorite taco spot.",
+  description: "Meet Toni Reyes — the story behind Toni's Tacos and Bishop Arts' favorite taco spot.",
 };
 
 export default function AboutPage() {
@@ -16,10 +16,10 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative aspect-square rounded-3xl overflow-hidden shadow-lg">
               <Image
-                src="/toni-headshot.jpg"
+                src="/gallery/Gemini_Generated_Image_5psx6m5psx6m5psx.png"
                 alt="Toni Reyes, Founder of Toni's Tacos"
                 fill
-                className="object-cover"
+                className="object-cover object-top"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
@@ -27,13 +27,13 @@ export default function AboutPage() {
               <SectionHeader title="Meet Toni." align="left" />
               <div className="space-y-5 text-muted leading-relaxed">
                 <p>
-                  Antonia &ldquo;Toni&rdquo; Reyes grew up in her grandmother&apos;s kitchen in San Antonio, where Sunday mornings meant hand-pressed tortillas and slow-cooked meats that filled the house with something close to magic. Food wasn&apos;t a hobby in the Reyes household â€” it was a language. A way of saying <em>I love you</em> and <em>you belong here</em> without saying a word.
+                  Antonia &ldquo;Toni&rdquo; Reyes grew up in her grandmother&apos;s kitchen in San Antonio, where Sunday mornings meant hand-pressed tortillas and slow-cooked meats that filled the house with something close to magic. Food wasn&apos;t a hobby in the Reyes household — it was a language. A way of saying <em>I love you</em> and <em>you belong here</em> without saying a word.
                 </p>
                 <p>
-                  After earning a culinary degree and spending several years cooking in restaurants across Texas, Toni took a leap in 2015 and launched a food truck out of deep East Dallas. The truck â€” painted red and orange, naturally â€” became a neighborhood fixture almost immediately. People lined up not just for the tacos, but for the experience: the music she&apos;d play through a little Bluetooth speaker, the way she remembered your order, the genuine joy she had behind the service window.
+                  After earning a culinary degree and spending several years cooking in restaurants across Texas, Toni took a leap in 2015 and launched a food truck out of deep East Dallas. The truck — painted red and orange, naturally — became a neighborhood fixture almost immediately. People lined up not just for the tacos, but for the experience: the music she&apos;d play through a little Bluetooth speaker, the way she remembered your order, the genuine joy she had behind the service window.
                 </p>
                 <p>
-                  Four years later, in 2019, Toni signed the lease on 408 W 8th Street in the Bishop Arts District and opened the doors to a brick-and-mortar home. The neighborhood embraced her immediately, and Toni has returned that love ever since â€” sourcing from local farms and DFW breweries, hosting emerging local musicians every weekend, and keeping her prices honest so the whole community can pull up a chair.
+                  Four years later, in 2019, Toni signed the lease on 408 W 8th Street in the Bishop Arts District and opened the doors to a brick-and-mortar home. The neighborhood embraced her immediately, and Toni has returned that love ever since — sourcing from local farms and DFW breweries, hosting emerging local musicians every weekend, and keeping her prices honest so the whole community can pull up a chair.
                 </p>
                 <p>
                   Toni is in the kitchen most days. Her philosophy hasn&apos;t changed since that food truck: everything made fresh, nothing from a can, and always enough salsa.
@@ -70,7 +70,7 @@ export default function AboutPage() {
           <blockquote className="font-heading text-2xl md:text-3xl italic text-charcoal leading-relaxed">
             &ldquo;At Toni&apos;s, we believe tacos are better when shared. Whether you&apos;re a regular or it&apos;s your first time, you&apos;re part of the family now.&rdquo;
           </blockquote>
-          <p className=”mt-6 text-muted font-medium”>— Toni Reyes</p>
+          <p className="mt-6 text-muted font-medium">— Toni Reyes</p>
         </div>
       </section>
     </div>

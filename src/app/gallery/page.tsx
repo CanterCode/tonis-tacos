@@ -4,7 +4,7 @@ import { galleryImages } from '@/data/galleryImages';
 
 export const metadata: Metadata = {
   title: 'Gallery',
-  description: “A look inside Toni's Tacos — the food, the space, the vibes.”,
+  description: "A look inside Toni's Tacos — the food, the space, the vibes.",
 };
 
 export default function GalleryPage() {

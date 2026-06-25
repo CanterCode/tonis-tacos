@@ -90,11 +90,11 @@ export const drinkSections: MenuSection[] = [
 ];
 
 export const happyHourItems: HappyHourItem[] = [
-  { name: 'Draft Beer (any tap)', regular: '$7–$8', happyHour: '$1 off' },
-  { name: 'Classic Margarita', regular: '$10', happyHour: '$7' },
-  { name: 'Classic Street Taco', regular: '$3.50', happyHour: '$2.50' },
-  { name: 'Veggie Taco', regular: '$3.75', happyHour: '$2.50' },
-  { name: 'Spicy Chicken Taco', regular: '$4.00', happyHour: '$2.50' },
-  { name: 'Chips & House Salsa', regular: '$4', happyHour: '$2' },
-  { name: 'Queso Fundido', regular: '$8', happyHour: '$5' },
+  { name: 'Draft Beer (any tap)', regular: '$7–$8', happyHour: '$1 off', category: 'drinks' },
+  { name: 'Classic Margarita',    regular: '$10',   happyHour: '$7',     category: 'drinks' },
+  { name: 'Classic Street Taco',  regular: '$3.50', happyHour: '$2.50',  category: 'food' },
+  { name: 'Veggie Taco',          regular: '$3.75', happyHour: '$2.50',  category: 'food' },
+  { name: 'Spicy Chicken Taco',   regular: '$4.00', happyHour: '$2.50',  category: 'food' },
+  { name: 'Chips & House Salsa',  regular: '$4',    happyHour: '$2',     category: 'food' },
+  { name: 'Queso Fundido',        regular: '$8',    happyHour: '$5',     category: 'food' },
 ];
