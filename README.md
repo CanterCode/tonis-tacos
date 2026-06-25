@@ -95,13 +95,3 @@ CSS tokens are defined in `src/app/globals.css` using Tailwind v4's `@theme` blo
 | Daily specials / live music | `src/data/eventsData.ts` |
 | Testimonials | `src/data/testimonialsData.ts` |
 | Phone, address, hours, socials | `src/constants/siteConfig.ts` |
-
-## Deployment
-
-**Vercel** (recommended):
-```bash
-vercel deploy
-```
-Or connect your GitHub repo at [vercel.com](https://vercel.com) for automatic deploys on push.
-
-**Netlify** also works with `next build` via the `@netlify/plugin-nextjs` adapter.
