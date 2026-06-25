@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Toni's Tacos
+
+Production website for **Toni's Tacos** — a woman-owned taco shop in Dallas's Bishop Arts District.
+
+## Tech Stack
+
+| Tool | Version | Purpose |
+|---|---|---|
+| Next.js | 16 (App Router) | Framework, SSR, file-based routing |
+| React | 19 | UI library |
+| TypeScript | 5 | Type safety |
+| Tailwind CSS | v4 | Utility-first styling |
+| Framer Motion | 12 | Animations and transitions |
+| Lucide React | latest | Icons |
+| `next/font/google` | — | Playfair Display + Inter |
+| `next/image` | — | Optimized image rendering |
+| `next/link` | — | Client-side navigation |
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev       # dev server at localhost:3000
+npm run build     # production build
+npm run start     # run production build locally
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+src/
+├── app/                  # App Router routes
+│   ├── layout.tsx        # Root layout: fonts, Navbar, Footer
+│   ├── page.tsx          # Home (/)
+│   ├── menu/page.tsx     # Menu (/menu)
+│   ├── events/page.tsx   # Events (/events)
+│   ├── gallery/page.tsx  # Gallery (/gallery)
+│   ├── about/page.tsx    # About (/about)
+│   └── contact/page.tsx  # Contact (/contact)
+├── assets/logo.svg
+├── styles/animations.css
+├── types/index.ts        # Shared TypeScript interfaces
+├── constants/siteConfig.ts  # Business info, hours
+├── data/                 # Menu, events, testimonials, gallery
+├── hooks/                # useScrollPosition, useFocusTrap
+└── components/
+    ├── layout/           # Navbar, Footer
+    ├── ui/               # Button, Card, Badge, SectionHeader, StarRating, MenuTabs
+    ├── modals/           # OrderModal, Lightbox
+    ├── home/             # HeroSection, TestimonialsGrid
+    ├── events/           # EventsGrid
+    ├── gallery/          # GalleryGrid
+    └── contact/          # ContactForm
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Design System
 
-## Learn More
+| Token | Value | Tailwind class |
+|---|---|---|
+| Primary red | `#C0392B` | `bg-primary`, `text-primary` |
+| Primary dark | `#8B1A1A` | `bg-primary-dark` |
+| Secondary orange | `#E67E22` | `bg-secondary`, `text-secondary` |
+| Accent yellow | `#F39C12` | `text-accent` |
+| Charcoal | `#1A1A1A` | `text-charcoal` |
+| Cream | `#FAF6F0` | `bg-cream`, `text-cream` |
+| Muted gray | `#6B6B6B` | `text-muted` |
 
-To learn more about Next.js, take a look at the following resources:
+Typography: **Playfair Display** (`font-heading`) for headings, **Inter** (`font-body`) for body. Both loaded via `next/font/google` — no external requests.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+CSS tokens are defined in `src/app/globals.css` using Tailwind v4's `@theme` block.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Next.js Notes
 
-## Deploy on Vercel
+- **App Router**: all routes are `page.tsx` files inside `src/app/`
+- **Server Components** by default — no JS shipped to the client unless needed
+- **`'use client'`** on: Navbar, modals, Framer Motion wrappers, form, tab switcher, gallery grid, events grid
+- Fonts: `next/font/google` self-hosts Google Fonts — no `@import` in CSS
+- Images: `next/image` for all static images; raw `<img>` only in the gallery lightbox
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Adding Gallery Images
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Drop the image file into `/public/gallery/`
+2. Open `src/data/galleryImages.ts`
+3. Add an entry:
+   ```ts
+   { filename: 'birria-taco.jpg', alt: 'Birria taco with consomé dipping broth', caption: 'Our famous Birria' }
+   ```
+4. Run `npm run build` to verify
+
+## Updating Content
+
+| What to change | File |
+|---|---|
+| Menu items | `src/data/menuData.ts` |
+| Daily specials / live music | `src/data/eventsData.ts` |
+| Testimonials | `src/data/testimonialsData.ts` |
+| Phone, address, hours, socials | `src/constants/siteConfig.ts` |
+
+## Deployment
+
+**Vercel** (recommended):
+```bash
+vercel deploy
+```
+Or connect your GitHub repo at [vercel.com](https://vercel.com) for automatic deploys on push.
+
+**Netlify** also works with `next build` via the `@netlify/plugin-nextjs` adapter.
